@@ -10,11 +10,11 @@
   首先用人脸检测模型检测source image和target image中的人脸，并分析人脸特征；然后抠出source人脸和target人脸，给到inswapper完成换脸再贴到target image上。人脸修复是一项可选的后处理，本仓库中使用的是codeformer模型。
 
 ## 环境搭建
-- `git clone https://github.com/ZillaRU/roop_face.git`
 - `cd roop_face`
 - 安装必要的包：`pip3 install torch torchvision opencv-python-headless flask==2.2.2 insightface onnxruntime gradio`
 - 下载[tpu-perf包](https://github.com/sophgo/tpu-perf/releases/download/v1.2.35/tpu_perf-1.2.35-py3-none-manylinux2014_aarch64.whl), 并安装`pip3 install tpu-perf*.whl`。
-- [下载bmodel文件](https://drive.google.com/file/d/14EI7FUqfKsCGknSMvYblSUjDUAdusmn4/view?usp=sharing)，然后在项目根目录建立`bmodel_files`，解压（`tar xzvf bmodel_files.tar.gz`）并把bmodel文件放进去。
+- [下载bmodel文件](链接：https://pan.baidu.com/s/10wUMZdAb23bHsSbP9dCNDw?pwd=670n 提取码：670n)，然后在项目根目录建立`bmodel_files`，解压（`tar xzvf bmodel_files.tar.gz`）并把bmodel文件放进去。
+- [下载权重文件]（链接：链接：https://pan.baidu.com/s/1NQDbE-O2VWVUCo0aUNC4sQ?pwd=hppi 提取码：hppi ），解压后的onnx文件放roop_face/weights/models/buffalo_l/下。
 
 ## Web demo
 `python demo_app.py`，启动完成后终端会显示端口号，浏览器访问`盒子ip:端口号`即可。
